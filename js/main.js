@@ -9,6 +9,7 @@ async function dameMiPokemon(poke){
         imagen.alt = "pokemon";
         document.getElementById("miPoke").append(imagen);
         document.getElementById("nombreEquipo").append(pokemon.name)
+        document.getElementById("suPokeId").innerHTML = poke;
     }
     catch(err) { console.log("Che, hubo un error: ", err)}
 }
@@ -24,6 +25,7 @@ async function dameMiPokeDato(poke){
         imagen.alt = "pokemon";
         document.getElementById("otroPoke").append(imagen);
         document.getElementById("nombreEquipoRival").append(pokemon.name)
+        document.getElementById("miPokeId").innerHTML = poke;
     }
     catch(err) { console.log("Che, hubo un error: ", err)}
 }
@@ -41,13 +43,24 @@ function huir(){
     document.getElementById("consola").innerHTML = "";
     document.getElementById("consola").append(". . .")
 }
-function pelea(moves1){
-    setTimeout( () =>{
-        document.getElementById("consola").innerHTML = `<div class="menu"><button>${"moves1[0].moves.name"}</button><button>${"moves1[1].moves.name"}</button><button>${"moves1[2].moves.name"}</button><button>${"moves1[3].moves.name"}</button></div>`;
-    }, 1000);
-    document.getElementById("consola").innerHTML = "";
-    document.getElementById("consola").append(". . .")
+function pelea(){
+    const miPokeId = document.getElementById("miPokeId").innerHTML;
+    fetch(`https://pokeapi.co/api/v2/pokemon/${miPokeId}`)
+    .then(res => res.json())
+    .then(data => {    
+        console.log(data)
+        let habilidad1 = randomIntFromInterval(1,data.moves.length);
+        let habilidad2 = randomIntFromInterval(1,data.moves.length);
+        let habilidad3 = randomIntFromInterval(1,data.moves.length);
+        let habilidad4 = randomIntFromInterval(1,data.moves.length);
+
+        setTimeout( () =>{
+            document.getElementById("consola").innerHTML = `<div class="menu"><button>${data.moves[habilidad1].move.name}</button><button>${data.moves[habilidad2].move.name}</button><button>${data.moves[habilidad3].move.name}</button><button>${data.moves[habilidad4].move.name}</button></div>`;
+        }, 1000);
+        document.getElementById("consola").innerHTML = "";
+        document.getElementById("consola").append(". . .")
+    })
 }
 function abrirEquipo(){
-    
+  
 }
