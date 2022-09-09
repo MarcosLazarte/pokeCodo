@@ -11,6 +11,7 @@
     grid-template-columns: 100%;
     grid-template-rows: 50% 50%;
     z-index: -2;
+    overflow: hidden;
 }
 .miLado{
     transform: translateY(-40px); /*Con esto subo un poco mi mitad para que no haya tanta distancia*/
