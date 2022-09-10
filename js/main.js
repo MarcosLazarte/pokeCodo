@@ -99,5 +99,5 @@ function a(){
 function b(){
     if(this.classList.toggle('sec')){
         this.classList.remove('first')
-    };
+    }
 }
