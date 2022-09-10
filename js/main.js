@@ -55,12 +55,49 @@ function pelea(){
         let habilidad4 = randomIntFromInterval(1,data.moves.length);
 
         setTimeout( () =>{
-            document.getElementById("consola").innerHTML = `<div class="menu"><button>${data.moves[habilidad1].move.name}</button><button>${data.moves[habilidad2].move.name}</button><button>${data.moves[habilidad3].move.name}</button><button>${data.moves[habilidad4].move.name}</button></div>`;
-        }, 1000);
+            document.getElementById("hud").classList.toggle('hudPelea');
+            document.getElementById("consola").innerHTML = `<div class="menu"><button onClick=ataque()>${data.moves[habilidad1].move.name}</button><button>${data.moves[habilidad2].move.name}</button><button>${data.moves[habilidad3].move.name}</button><button>${data.moves[habilidad4].move.name}</button></div>`;
+        }, 500);
         document.getElementById("consola").innerHTML = "";
         document.getElementById("consola").append(". . .")
     })
 }
 function abrirEquipo(){
-  
+    setTimeout( () =>{
+        document.getElementById("consola").innerHTML = "No puedes cambiar a tu equipo en esta version";
+    }, 1000);
+    document.getElementById("consola").innerHTML = "";
+    document.getElementById("consola").append(". . .")
+}
+function bolsa(){
+    setTimeout( () =>{
+        document.getElementById("consola").innerHTML = "No puedes abrir tu mochila en esta version";
+    }, 1000);
+    document.getElementById("consola").innerHTML = "";
+    document.getElementById("consola").append(". . .")
+}
+function ataque(){
+    if(document.getElementById("miPoke").classList.contains('movimientoPegar')){
+        document.getElementById("miPoke").classList.remove('movimientoPegar')
+        document.getElementById("miPoke").classList.add('movimientoPegarB')
+        return;
+    }
+    else{
+        document.getElementById("miPoke").classList.remove('movimientoPegarB') 
+        document.getElementById("miPoke").classList.add('movimientoPegar');
+    }
+}
+
+document.querySelector('#container').addEventListener('mouseleave', a )
+document.querySelector('#container').addEventListener('mouseenter', b )
+function a(){
+    if(this.classList.toggle('sec')){
+        this.classList.toggle('sec');
+    }
+    this.classList.toggle('first');
+}
+function b(){
+    if(this.classList.toggle('sec')){
+        this.classList.remove('first')
+    };
 }
