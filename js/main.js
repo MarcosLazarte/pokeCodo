@@ -68,7 +68,7 @@ function pelea(){
             document.getElementById("consola").innerHTML = `<div class="menu"><button onClick=ataque()>${data.moves[habilidad1].move.name}</button><button>${data.moves[habilidad2].move.name}</button><button>${data.moves[habilidad3].move.name}</button><button>${data.moves[habilidad4].move.name}</button></div>`;
         }, 500);
         document.getElementById("consola").innerHTML = "";
-        document.getElementById("consola").innerHTML = `<div style="font-size:9vw">. . .</div>`;
+        document.getElementById("consola").innerHTML = `<div style="font-size:55px">. . .</div>`;
     })
 }
 function abrirEquipo(){

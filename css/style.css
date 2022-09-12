@@ -141,7 +141,7 @@ grid-template-rows: repeat(5, 1fr);
     position: absolute;
     margin-left: 20%;
     margin-top: 20vh;
-    animation: entrada 1.75s forwards;
+    animation: entrada 1.5s forwards;
 }
 .pokeArriba{
     width: calc(100% - 12px);
