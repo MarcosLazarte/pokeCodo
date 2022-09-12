@@ -208,6 +208,7 @@ grid-template-rows: repeat(5, 1fr);
     background-color: #F10801;
 }
 .asdf{
+    display: none;
     width: 123px;
     height: 100px;
 }
