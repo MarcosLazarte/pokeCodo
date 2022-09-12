@@ -21,10 +21,11 @@
         <section class="pantalla">
             <section class="tuLado">
                 <div class="vida margin5L">
-                    <p id="nombreEquipoRival"></p>
-                    <p>lv</p>
-                    <div>estados</div>
-                    <div>vida</div>
+                    <p class="vida_nombre" id="nombreEquipoRival"></p>
+                    <p class="vida_level">lv</p>
+                    <div class="vida_estados">ESTs</div>
+                    <div class="vida_barra"><div class="vida_barraRoja"></div></div>
+                    <div class="vida_numero">500/500</div>
                 </div>
                 <div class="espacioPokeSalvaje">
                     <div class="pokeSalvaje" id="otroPoke">
@@ -49,24 +50,27 @@
                     </div>
                 </div>
                 <div class="vida">
-                    <p id="nombreEquipo"></p>
-                    <p>lv</p>
-                    <div>estados</div>
-                    <div>vida</div>
+                    <p class="vida_nombre" id="nombreEquipo"></p>
+                    <p class="vida_level">lv</p>
+                    <div class="vida_estados">ESTs</div>
+                    <div class="vida_barra"><div id="vida_barraRoja" class="vida_barraRoja"></div></div>
+                    <div class="vida_numero">50/100</div>
                 </div>
             </section>
         </section>
-        <section class="hud">
+        <section class="hud" id="hud">
             <div class="consola" id="consola">
+                <p class="textoConsola">¿Qué debería <span class="nombrePoke" id="nombrePoke"></span> hacer?</p>
             </div>
             <div class="menu">
                 <button onclick=pelea()>Fight</button>
-                <button>Bag</button>
+                <button onclick=bolsa()>Bag</button>
                 <button onclick=abrirEquipo()>POKéMON</button>
                 <button onclick=huir()>Run</button>
             </div>
         </section>
     </main>
+    <div id="container" class="asdf">asdfasdfasdf</div>
     <script src="js/main.js"></script>
 </body>
 </html>
