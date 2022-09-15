@@ -213,7 +213,7 @@ grid-template-rows: repeat(5, 1fr);
     height: 100px;
 }
 .danio{
-    animation: bajarVida 1.75s forwards;
+    animation: animacionBajarVida 1.75s forwards;
 }
 @keyframes bajarVida {
     to{
