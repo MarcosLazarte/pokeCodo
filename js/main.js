@@ -135,10 +135,10 @@ function ataque(){
         document.getElementById("miPoke").classList.add('movimientoPegar');
     }
     let ataque = 10;
-    let vida = parseInt(document.getElementById("vidaActual").innerHTML);
-    let vidaTotal = parseInt(document.getElementById("vidaTotal").innerHTML);
+    let vida = parseInt(document.getElementById("vidaActualRival").innerHTML);
+    let vidaTotal = parseInt(document.getElementById("vidaTotalRival").innerHTML);
     
-    document.getElementById("vidaActual").innerHTML = vida - ataque;
+    document.getElementById("vidaActualRival").innerHTML = vida - ataque;
 
     addAnimation(`
       @keyframes animacionBajarVida { 
@@ -150,7 +150,7 @@ function ataque(){
       }
     `);
 
-    document.getElementById("vida_barraRoja").classList.add("danio");
+    document.getElementById("vida_barraRojaRival").classList.add("danio");
 }
 
 function vida(danio, pokemon){
